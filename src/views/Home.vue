@@ -24,7 +24,6 @@ export default {
   },
   computed: {
     isFormValid() {
-      console.log('Checking form validity');
       return this.selectedDate && this.enteredEmail;
     }
   },
@@ -33,7 +32,6 @@ export default {
       this.selectedDate = date;
     },
     updateEmail(email) {
-      console.log('Email entered:', email);
       this.enteredEmail = email;
     },
     pay() {
