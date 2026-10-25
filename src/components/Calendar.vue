@@ -1,6 +1,10 @@
 <template>
   <div class="calendar">
-    <input type="date" v-model="selectedDate" @change="emitDate" />
+    <input
+      v-model="selectedDate"
+      type="date"
+      @change="emitDate"
+    >
   </div>
 </template>
 

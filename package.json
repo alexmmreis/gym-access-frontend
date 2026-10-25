@@ -2,24 +2,25 @@
   "name": "vue-calendar-email-app",
   "version": "1.0.0",
   "description": "A Vue.js application with a calendar and email input.",
+  "type": "module",
   "main": "src/main.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
-  },
-  "devDependencies": {
-    "@vue/cli-service": "^4.5.0",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^7.0.0",
-    "eslint-plugin-vue": "^7.0.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
+    "vue": "^3.5.44"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "eslint": "^10.13.0",
+    "eslint-plugin-vue": "^10.11.1",
+    "globals": "^17.13.0",
+    "vite": "^8.3.5"
+  }
 }

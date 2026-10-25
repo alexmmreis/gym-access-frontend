@@ -3,7 +3,12 @@
     <h1>Select a Date and Enter Your Email</h1>
     <Calendar @date-selected="updateDate" />
     <EmailInput @email-entered="updateEmail" />
-    <button :disabled="!isFormValid" @click="pay">Pay</button>
+    <button
+      :disabled="!isFormValid"
+      @click="pay"
+    >
+      Pay
+    </button>
   </div>
 </template>
 

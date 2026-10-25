@@ -13,16 +13,15 @@ A Vue.js single-page app that lets gym members book and pay for a daily pass.
 ## Tech Stack
 
 - Vue 3
-- Vue Router 4 (dependency installed, not yet wired up)
-- Vue CLI 4 (`@vue/cli-service`)
-- ESLint with `eslint-plugin-vue`
-- Tailwind CSS 4 and PostCSS/Autoprefixer (dependencies installed)
+- Vite (dev server and production build) with `@vitejs/plugin-vue`
+- ESLint 10 (flat config) with `eslint-plugin-vue`
 
 ## Project Structure
 
 ```
-public/
-  index.html            HTML shell with the #app mount point
+index.html              HTML shell with the #app mount point (Vite entry)
+vite.config.js          Vite configuration (Vue plugin, dev port)
+eslint.config.js        ESLint flat config
 src/
   main.js               Creates and mounts the root app
   App.vue               Root component, renders Home
@@ -50,7 +49,7 @@ npm install
 ### Run in development
 
 ```bash
-npm run serve
+npm run dev
 ```
 
 The app runs at http://localhost:8080 by default.
@@ -62,6 +61,12 @@ npm run build
 ```
 
 Output is written to `dist/`.
+
+### Preview the production build
+
+```bash
+npm run preview
+```
 
 ### Lint
 
@@ -79,18 +84,17 @@ npm run lint
 ## Known Limitations
 
 - Payment processing is not implemented; `pay()` in `Home.vue` only shows an alert.
-- Vue Router is installed but no routes are defined and it is not registered in `main.js`.
-- Tailwind CSS is installed, but no Tailwind configuration or directives are present in the source.
 - The email regex is a simple format check and does not confirm the address exists.
 - The date input does not restrict past dates.
 
 ## Scripts
 
-| Command           | Description                          |
-| ----------------- | ------------------------------------ |
-| `npm run serve`   | Start the dev server with hot reload |
-| `npm run build`   | Create a production build in `dist/` |
-| `npm run lint`    | Lint and auto-fix source files       |
+| Command           | Description                                 |
+| ----------------- | ------------------------------------------- |
+| `npm run dev`     | Start the Vite dev server with hot reload   |
+| `npm run build`   | Create a production build in `dist/`        |
+| `npm run preview` | Serve the production build locally          |
+| `npm run lint`    | Lint and auto-fix source files              |
 
 ## License
 

@@ -1,11 +1,11 @@
 <template>
   <div>
     <input
-      type="email"
       v-model="email"
-      @input="validateEmail"
+      type="email"
       placeholder="Enter your email"
-    />
+      @input="validateEmail"
+    >
     <span v-if="!isValidEmail && email">Invalid email format</span>
   </div>
 </template>
